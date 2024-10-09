@@ -35,6 +35,7 @@ public class Inicio {
 		int opcionSeleccionada = 0;
 		Boolean cerrarMenu = false;
 
+		cI.conectar();
 		// Creamos un bucle para que no se termine hasta que el usuario lo indique
 		do {
 			try {
