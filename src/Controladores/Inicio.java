@@ -1,22 +1,22 @@
-package Controladores;
+package controladores;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Dtos.usuarioDto;
-import Servicios.ConexionBBDDImplementacion;
-import Servicios.ConexionBBDDInterfaz;
-import Servicios.MenuImplementacion;
-import Servicios.MenuInterfaz;
-import Servicios.OperativaImplementacion;
-import Servicios.OperativaInterfaz;
+import dtos.usuarioDto;
+import servicios.ConexionBBDDImplementacion;
+import servicios.ConexionBBDDInterfaz;
+import servicios.MenuImplementacion;
+import servicios.MenuInterfaz;
+import servicios.OperativaImplementacion;
+import servicios.OperativaInterfaz;
 
 /*
  * Clase principal de la aplicacion
  * 25/09/2024
  * @author irodhan
  */
-public class Main {
+public class Inicio {
 
 	// Variables globales
 	public List<usuarioDto> listaUsuarios = new ArrayList<>();
@@ -36,7 +36,7 @@ public class Main {
 		Boolean cerrarMenu = false;
 
 		// Creamos un bucle para que no se termine hasta que el usuario lo indique
-		while (!cerrarMenu) {
+		do {
 			try {
 				// Guardamos la opcion indicado
 				opcionSeleccionada = mI.mostrarMenuYSeleccion();
@@ -51,20 +51,37 @@ public class Main {
 					break;
 				case 1:
 					System.out.println("[INFO] - Ha seleccionado la opcion 1");
+					oI.darAltaUsuario();
 					break;
 				case 2:
 					System.out.println("[INFO] - Ha seleccionado la opcion 2");
+					oI.darAltaClub();
+					break;
+				case 3:
+					System.out.println("[INFO] - Ha seleccionado la opcion 3");
+
+					break;
+				case 4:
+					System.out.println("[INFO] - Ha seleccionado la opcion 4");
+
+					break;
+				case 5:
+					System.out.println("[INFO] - Ha seleccionado la opcion 5");
+
+					break;
+				case 6:
+					System.out.println("[INFO] - Ha seleccionado la opcion 6");
+
 					break;
 				default:
 					System.out.println(
 							"[INFO] - La opcion seleccionado no coincide con ninguna opcion mostrada anteriormente.");
 					break;
-
 				}
 			} catch (Exception e) {
 				System.out.println("[INFO] - Ha ocurrido un error.");
 				System.out.println(e.getMessage());
 			}
-		}
+		} while(!cerrarMenu);
 	}
 }

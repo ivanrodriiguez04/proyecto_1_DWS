@@ -1,4 +1,4 @@
-package Servicios;
+package servicios;
 
 /*
  * Interfaz de los menus de la aplicacion

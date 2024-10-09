@@ -1,4 +1,4 @@
-package Servicios;
+package servicios;
 
 /*
  * Interfaz principal de las operaciones de la aplicacion
@@ -7,4 +7,7 @@ package Servicios;
  */
 public interface OperativaInterfaz {
 
+	public void darAltaUsuario();
+	
+	public void darAltaClub();
 }

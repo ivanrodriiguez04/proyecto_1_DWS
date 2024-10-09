@@ -1,4 +1,4 @@
-package Dtos;
+package dtos;
 
 /*
  * CLase que contiene toda la informacion de los usuarios

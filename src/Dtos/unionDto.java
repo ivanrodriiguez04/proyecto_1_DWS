@@ -1,4 +1,4 @@
-package Dtos;
+package dtos;
 
 /*
  * Clase que contiene los dto de la union

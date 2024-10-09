@@ -1,4 +1,4 @@
-package Servicios;
+package servicios;
 
 import java.util.Scanner;
 /*
@@ -17,10 +17,13 @@ public class MenuImplementacion implements MenuInterfaz{
 		System.out.println("| 0. Cerrar App        |");
 		System.out.println("| 1. Dar alta usuario  |");
 		System.out.println("| 2. Dar alta club     |");
+	    System.out.println("| 3. Modificar usuario |");
+	    System.out.println("| 4. Modificar club    |");
+	    System.out.println("| 5. Dar baja usuario  |");
+        System.out.println("| 6. Dar baja club     |");
 		System.out.println("|----------------------|");
 		opcion=sc.nextInt();
-		sc.close();
 		return opcion;
-	}
+		}
 
 }
