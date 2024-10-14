@@ -3,7 +3,7 @@ package controladores;
 import java.util.ArrayList;
 import java.util.List;
 
-import dtos.usuarioDto;
+import dtos.UsuarioDto;
 import servicios.ConexionBBDDImplementacion;
 import servicios.ConexionBBDDInterfaz;
 import servicios.MenuImplementacion;
@@ -19,7 +19,7 @@ import servicios.OperativaInterfaz;
 public class Inicio {
 
 	// Variables globales
-	public List<usuarioDto> listaUsuarios = new ArrayList<>();
+	public List<UsuarioDto> listaUsuarios = new ArrayList<>();
 
 	/*
 	 * Metodo principal de la aplicacion 25/09/2024

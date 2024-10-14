@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class ConexionBBDDImplementacion implements ConexionBBDDInterfaz {
 	
-	private String url = "jdbc:postgresql://localhost:5432/proyecto_1";
+	private String url = "jdbc:postgresql://localhost:5432/proyectoDWS";
 	private String user = "postgres";
 	private String password = "_Ivanrodriiguez04";
 	public Connection conectar() {

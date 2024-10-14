@@ -1,6 +1,6 @@
 package dtos;
 
-public class sedeDto {
+public class SedeDto {
 
 	//Variables
 	private long idSede;
@@ -8,7 +8,7 @@ public class sedeDto {
 	private String direccionSede="aaaaa";
 	private long idClub;
 	//Constructores
-	public sedeDto(long idSede, String nombreSede, String direccionSede, long idClub) {
+	public SedeDto(long idSede, String nombreSede, String direccionSede, long idClub) {
 		super();
 		this.idSede = idSede;
 		this.nombreSede = nombreSede;

@@ -5,7 +5,7 @@ package dtos;
  * 02/10/2024
  * @author irodhan
  */
-public class motoDto {
+public class MotoDto {
 
 	//Variables
 	private long idMoto;
@@ -16,7 +16,7 @@ public class motoDto {
 	private long idUsuario;
 	
 	//Constructores
-	public motoDto(long idMoto, String marcaMoto, String modeloMoto, String colorMoto, String matriculaMoto,
+	public MotoDto(long idMoto, String marcaMoto, String modeloMoto, String colorMoto, String matriculaMoto,
 			long idUsuario) {
 		super();
 		this.idMoto = idMoto;

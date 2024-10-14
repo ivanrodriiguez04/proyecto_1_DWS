@@ -2,7 +2,7 @@ package dtos;
 
 import java.sql.Timestamp;
 
-public class rutaDto {
+public class RutaDto {
 
 	//Variables
 	private long idRuta;
@@ -14,7 +14,7 @@ public class rutaDto {
 	private Timestamp horaFinRuta;
 	
 	//Constructores
-	public rutaDto(long idRuta, String nombreRuta, int distaciaRuta, String codigoRuta, Boolean esPrivada,
+	public RutaDto(long idRuta, String nombreRuta, int distaciaRuta, String codigoRuta, Boolean esPrivada,
 			Timestamp horaInicioRuta, Timestamp horaFinRuta) {
 		super();
 		this.idRuta = idRuta;

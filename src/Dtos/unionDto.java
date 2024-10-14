@@ -5,7 +5,7 @@ package dtos;
  * 03/10/2024
  * @author irodhan
  */
-public class unionDto {
+public class UnionDto {
 
 	//Variables
 	private long idUnion;
@@ -14,7 +14,7 @@ public class unionDto {
 	private long idClub;
 	private long idUsuario;
 	//Constructores
-	public unionDto(long idUnion, Boolean estadoUnion, long idRuta, long idClub, long idUsuario) {
+	public UnionDto(long idUnion, Boolean estadoUnion, long idRuta, long idClub, long idUsuario) {
 		super();
 		this.idUnion = idUnion;
 		this.estadoUnion = estadoUnion;

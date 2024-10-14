@@ -2,7 +2,7 @@ package dtos;
 
 import java.sql.Timestamp;
 
-public class eventoDto {
+public class EventoDto {
 
 	//Variable
 	private long idEvento;
@@ -13,7 +13,7 @@ public class eventoDto {
 	private Boolean esPrivada=false;
 	private long idRuta;
 	//Constructores
-	public eventoDto(long idEvento, String nombreEvento, Timestamp fechaEvento, Boolean tipoEvento, int precioEntrada,
+	public EventoDto(long idEvento, String nombreEvento, Timestamp fechaEvento, Boolean tipoEvento, int precioEntrada,
 			Boolean esPrivada, long idRuta) {
 		super();
 		this.idEvento = idEvento;

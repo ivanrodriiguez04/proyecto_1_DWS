@@ -1,6 +1,6 @@
 package dtos;
 
-public class solicitudDto {
+public class SolicitudDto {
 
 	//Variables
 	private long idSolicitud;
@@ -8,7 +8,7 @@ public class solicitudDto {
 	private long idUsuario;
 	private long idClub;
 	//Constructores
-	public solicitudDto(long idSolicitud, Boolean estadoSolicitud, long idUsuario, long idClub) {
+	public SolicitudDto(long idSolicitud, Boolean estadoSolicitud, long idUsuario, long idClub) {
 		super();
 		this.idSolicitud = idSolicitud;
 		this.estadoSolicitud = estadoSolicitud;

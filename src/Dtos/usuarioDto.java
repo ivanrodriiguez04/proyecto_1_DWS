@@ -5,7 +5,7 @@ package dtos;
  * 02/10/2024
  * @author irodhan
  */
-public class usuarioDto {
+public class UsuarioDto {
 
 	//Variables
 	private long idUsuario;
@@ -16,7 +16,7 @@ public class usuarioDto {
 	private String emailUsuario="aaaaa";
 	
 	//Constructores
-	public usuarioDto(long idUsuario, String nombreUsuario, String apellidosUsuario, int telefonoUsuario,
+	public UsuarioDto(long idUsuario, String nombreUsuario, String apellidosUsuario, int telefonoUsuario,
 			String dniUsuario, String emailUsuario) {
 		super();
 		this.idUsuario = idUsuario;
@@ -25,6 +25,11 @@ public class usuarioDto {
 		this.telefonoUsuario = telefonoUsuario;
 		this.dniUsuario = dniUsuario;
 		this.emailUsuario = emailUsuario;
+	}
+
+	public UsuarioDto() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	//Getters & Setters
