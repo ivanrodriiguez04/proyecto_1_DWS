@@ -19,5 +19,5 @@ public interface ConexionBBDDInterfaz {
 	 * 26/09/2024
 	 * @author irodhan
 	 */
-	public  void cerrarConexion(Connection conexion);
+	public  void cerrarConexion();
 }

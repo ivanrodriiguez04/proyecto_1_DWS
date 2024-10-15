@@ -3,6 +3,7 @@ package controladores;
 import java.util.ArrayList;
 import java.util.List;
 
+import dtos.ClubDto;
 import dtos.UsuarioDto;
 import servicios.ConexionBBDDImplementacion;
 import servicios.ConexionBBDDInterfaz;
@@ -19,7 +20,8 @@ import servicios.OperativaInterfaz;
 public class Inicio {
 
 	// Variables globales
-	public List<UsuarioDto> listaUsuarios = new ArrayList<>();
+	public static List<UsuarioDto> listaUsuarios = new ArrayList<>();
+	public static List<ClubDto> listaClubes = new ArrayList<>();
 
 	/*
 	 * Metodo principal de la aplicacion 25/09/2024
@@ -52,11 +54,11 @@ public class Inicio {
 					break;
 				case 1:
 					System.out.println("[INFO] - Ha seleccionado la opcion 1");
-					oI.darAltaUsuario();
+					oI.darAltaUsuario(listaUsuarios);
 					break;
 				case 2:
 					System.out.println("[INFO] - Ha seleccionado la opcion 2");
-					oI.darAltaClub();
+					oI.darAltaClub(listaClubes);
 					break;
 				case 3:
 					System.out.println("[INFO] - Ha seleccionado la opcion 3");

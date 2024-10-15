@@ -19,6 +19,10 @@ public class ClubDto {
 		this.idEvento = idEvento;
 	}
 	
+	public ClubDto() {
+		// TODO Auto-generated constructor stub
+	}
+
 	//Getters & Setters
 	public long getIdClub() {
 		return idClub;
