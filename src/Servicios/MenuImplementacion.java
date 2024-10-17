@@ -22,6 +22,7 @@ public class MenuImplementacion implements MenuInterfaz{
 	    System.out.println("| 5. Dar baja usuario  |");
         System.out.println("| 6. Dar baja club     |");
 		System.out.println("|----------------------|");
+		System.out.println("Introduzca la opcion deseada: ");
 		opcion=sc.nextInt();
 		return opcion;
 		}
