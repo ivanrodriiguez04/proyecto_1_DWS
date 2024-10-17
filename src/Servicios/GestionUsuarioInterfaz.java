@@ -1,8 +1,5 @@
 package servicios;
 
-import java.util.List;
-
-import dtos.UsuarioDto;
 /*
  * Interfaz de la gestion del usuario en la aplicacion
  * 17/10/2024
@@ -14,5 +11,5 @@ public interface GestionUsuarioInterfaz {
 	 * 17/10/2024
 	 * @author irodhan
 	 */
-	public void darAltaUsuario(List<UsuarioDto> listaUsuarios);
+	public void darAltaUsuario();
 }

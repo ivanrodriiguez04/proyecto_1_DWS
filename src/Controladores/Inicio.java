@@ -57,11 +57,11 @@ public class Inicio {
 					break;
 				case 1:
 					System.out.println("[INFO] - Ha seleccionado la opcion 1");
-					gU.darAltaUsuario(listaUsuarios);
+					gU.darAltaUsuario();
 					break;
 				case 2:
 					System.out.println("[INFO] - Ha seleccionado la opcion 2");
-					gC.darAltaClub(listaClubes);
+					gC.darAltaClub();
 					break;
 				case 3:
 					System.out.println("[INFO] - Ha seleccionado la opcion 3");

@@ -1,6 +1,8 @@
 package servicios;
 
-import java.util.List;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import dtos.ClubDto;
@@ -10,13 +12,32 @@ import dtos.ClubDto;
  * @author irodhan
  */
 public class GestionClubImplementacion implements GestionClubInterfaz{
-Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
+	ConexionBBDDInterfaz cI=new ConexionBBDDImplementacion();
 	ConsultasBBDDInterfaz consultas=new ConsultasBBDDImplementacion();
-	public void darAltaClub(List<ClubDto> listaClubes) {
-		consultas.cargaClub();
+	
+	public void darAltaClub() {
 		ClubDto nuevoClub= crearClub();
-		
-		listaClubes.add(nuevoClub);
+		String sql="INSERT INTO club_motos.clubes (idclub,nombreclub,idruta,idevento,direccionclub) VALUES (?,?,?,?,?)";
+		try {
+			Connection conexion=cI.conectar();
+			PreparedStatement sentencia=conexion.prepareStatement(sql);
+			
+			sentencia.setLong(1, nuevoClub.getIdClub());
+			sentencia.setString(2, nuevoClub.getNombreClub());
+			sentencia.setLong(3, nuevoClub.getIdRuta());
+			sentencia.setLong(4, nuevoClub.getIdEvento());
+			sentencia.setString(5, nuevoClub.getDireccionClub());
+			
+			int filasInsertadas=sentencia.executeUpdate();
+			if(filasInsertadas>0) {
+				System.out.println("[INFO] - Insertcion exitosa");
+			}
+
+		}catch(SQLException e) {
+			System.err.println("[INFO] - Ha ocurrido un error.");
+		}
+
 	}
 	/*
 	 * Metodo que crea un objeto club y pide la informacion necesaria al usuario

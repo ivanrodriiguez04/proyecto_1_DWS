@@ -24,7 +24,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 			conexion=cI.conectar();
 			sentencia=conexion.createStatement();
 			//Ejecutamos la consulta SQL
-			String sql="SELECT * FROM usuarios";
+			String sql="SELECT * FROM club_motos.usuarios";
 			ResultSet resultado=sentencia.executeQuery(sql);
 			//Cargamos los datos obtenidos en la lista
 			while(resultado.next()) 
@@ -35,7 +35,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 				usuario.setApellidosUsuario(resultado.getString(3));
 				usuario.setTelefonoUsuario(resultado.getInt(4));
 				usuario.setDniUsuario(resultado.getString(5));
-				usuario.setEmailUsuario(resultado.getString(6));
+				usuario.setEmailUsuario(resultado.getString(6));	
 				
 				controladores.Inicio.listaUsuarios.add(usuario);
 			}
@@ -45,6 +45,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 		
 		}catch(Exception e) {
 			System.err.println("[INFO] - Ha ocurrido algun error");
+			System.out.println(e.getMessage());
 			
 		}finally {
 			cI.cerrarConexion();
@@ -58,7 +59,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 			conexion=cI.conectar();
 			sentencia=conexion.createStatement();
 			//Ejecutamos la consulta SQL
-			String sql="SELECT * FROM clubes";
+			String sql="SELECT * FROM club_motos.clubes";
 			ResultSet resultado=sentencia.executeQuery(sql);
 			//Cargamos los datos obtenidos en la lista
 			while(resultado.next()) 
@@ -68,7 +69,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 				club.setNombreClub(resultado.getString(2));
 				club.setIdRuta(resultado.getLong(3));
 				club.setIdEvento(resultado.getLong(4));
-				club.setDireccionClub(resultado.getString(5));
+				club.setDireccionClub(resultado.getString(5));	
 				
 				controladores.Inicio.listaClubes.add(club);
 			}
