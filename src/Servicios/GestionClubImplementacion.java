@@ -36,6 +36,7 @@ public class GestionClubImplementacion implements GestionClubInterfaz{
 
 		}catch(SQLException e) {
 			System.err.println("[INFO] - Ha ocurrido un error.");
+			System.out.println(e.getMessage());
 		}
 
 	}
@@ -49,9 +50,9 @@ public class GestionClubImplementacion implements GestionClubInterfaz{
 		ClubDto nuevoClub=new ClubDto();
 		nuevoClub.setIdClub(util.Utilidades.asignarIdClub());
 		System.out.println("Introduzca el nombre del club:");
-		nuevoClub.setNombreClub(sc.next());
+		nuevoClub.setNombreClub(sc.nextLine());
 		System.out.println("Introduzca la direccion del club: ");
-		nuevoClub.setDireccionClub(sc.next());
+		nuevoClub.setDireccionClub(sc.nextLine());
 		return nuevoClub;
 	}
 }

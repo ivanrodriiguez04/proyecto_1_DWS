@@ -79,6 +79,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 		
 		}catch(Exception e) {
 			System.err.println("[INFO] - Ha ocurrido algun error");
+			System.out.println(e.getMessage());
 			
 		}finally {
 			cI.cerrarConexion();
