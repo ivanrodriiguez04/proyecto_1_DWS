@@ -6,17 +6,13 @@ public class ClubDto {
 	private long idClub;
 	private String nombreClub="aaaaa";
 	private String direccionClub="aaaaa";
-	private long idRuta;
-	private long idEvento;
 	
 	//Constructores
-	public ClubDto(long idClub, String nombreClub, String direccionClub, long idRuta, long idEvento) {
+	public ClubDto(long idClub, String nombreClub, String direccionClub) {
 		super();
 		this.idClub = idClub;
 		this.nombreClub = nombreClub;
 		this.direccionClub = direccionClub;
-		this.idRuta = idRuta;
-		this.idEvento = idEvento;
 	}
 	
 	public ClubDto() {
@@ -41,18 +37,6 @@ public class ClubDto {
 	}
 	public void setDireccionClub(String direccionClub) {
 		this.direccionClub = direccionClub;
-	}
-	public long getIdRuta() {
-		return idRuta;
-	}
-	public void setIdRuta(long idRuta) {
-		this.idRuta = idRuta;
-	}
-	public long getIdEvento() {
-		return idEvento;
-	}
-	public void setIdEvento(long idEvento) {
-		this.idEvento = idEvento;
 	}
 	
 }

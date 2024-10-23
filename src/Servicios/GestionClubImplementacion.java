@@ -18,16 +18,14 @@ public class GestionClubImplementacion implements GestionClubInterfaz{
 	
 	public void darAltaClub() {
 		ClubDto nuevoClub= crearClub();
-		String sql="INSERT INTO club_motos.clubes (idclub,nombreclub,idruta,idevento,direccionclub) VALUES (?,?,?,?,?)";
+		String sql="INSERT INTO club_motos.clubes (idclub,nombreclub,direccionclub) VALUES (?,?,?)";
 		try {
 			Connection conexion=cI.conectar();
 			PreparedStatement sentencia=conexion.prepareStatement(sql);
 			
 			sentencia.setLong(1, nuevoClub.getIdClub());
 			sentencia.setString(2, nuevoClub.getNombreClub());
-			sentencia.setLong(3, nuevoClub.getIdRuta());
-			sentencia.setLong(4, nuevoClub.getIdEvento());
-			sentencia.setString(5, nuevoClub.getDireccionClub());
+			sentencia.setString(3, nuevoClub.getDireccionClub());
 			
 			int filasInsertadas=sentencia.executeUpdate();
 			if(filasInsertadas>0) {

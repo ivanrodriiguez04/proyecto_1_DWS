@@ -67,9 +67,7 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 				ClubDto club=new ClubDto();
 				club.setIdClub(resultado.getLong(1));
 				club.setNombreClub(resultado.getString(2));
-				club.setIdRuta(resultado.getLong(3));
-				club.setIdEvento(resultado.getLong(4));
-				club.setDireccionClub(resultado.getString(5));	
+				club.setDireccionClub(resultado.getString(3));	
 				
 				controladores.Inicio.listaClubes.add(club);
 			}
