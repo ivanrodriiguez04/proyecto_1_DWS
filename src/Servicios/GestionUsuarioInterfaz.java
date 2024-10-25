@@ -12,4 +12,16 @@ public interface GestionUsuarioInterfaz {
 	 * @author irodhan
 	 */
 	public void darAltaUsuario();
+	/*
+	 * Metodo que permite dar de baja a un usuario
+	 * 21/10/2024
+	 * @author irodhan
+	 */
+	public void darBajaUsuario();
+	/*
+	 * Metodo que permite modificar la informacion de un usuario
+	 * 21/10/2024
+	 * @author irodhan
+	 */
+	public void modificarUsuario();
 }

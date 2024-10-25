@@ -13,7 +13,6 @@ public class GestionUsuarioImplementacion implements GestionUsuarioInterfaz{
 	ConsultasBBDDInterfaz consultas=new ConsultasBBDDImplementacion();
 	public void darAltaUsuario() {
 		// TODO Auto-generated method stub
-		consultas.cargaUsuario();
 		UsuarioDto nuevoUsuario= crearUsuario();
 		String sql="INSERT INTO club_motos.usuarios (idusuario,nombreusuario,apellidosusuario,telefonousuario,dniusuario,emailusuario) VALUES (?,?,?,?,?,?)";
 		try {
@@ -61,5 +60,15 @@ public class GestionUsuarioImplementacion implements GestionUsuarioInterfaz{
 		nuevoUsuario.setEmailUsuario(sc.next());
 		nuevoUsuario.setApellidosUsuario(apellido1+" "+apellido2);
 		return nuevoUsuario;
+	}
+	@Override
+	public void darBajaUsuario() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void modificarUsuario() {
+		// TODO Auto-generated method stub
+		
 	}
 }

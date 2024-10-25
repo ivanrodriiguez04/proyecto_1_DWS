@@ -35,7 +35,8 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 				usuario.setApellidosUsuario(resultado.getString(3));
 				usuario.setTelefonoUsuario(resultado.getInt(4));
 				usuario.setDniUsuario(resultado.getString(5));
-				usuario.setEmailUsuario(resultado.getString(6));	
+				usuario.setEmailUsuario(resultado.getString(6));
+				usuario.setPasswordUsuario(resultado.getString(7));
 				
 				controladores.Inicio.listaUsuarios.add(usuario);
 			}
@@ -68,7 +69,8 @@ public class ConsultasBBDDImplementacion  implements ConsultasBBDDInterfaz{
 				club.setIdClub(resultado.getLong(1));
 				club.setNombreClub(resultado.getString(2));
 				club.setDireccionClub(resultado.getString(3));	
-				
+				club.setEmailClub(resultado.getString(4));	
+				club.setPasswordClub(resultado.getString(5));	
 				controladores.Inicio.listaClubes.add(club);
 			}
 			resultado.close();

@@ -14,10 +14,16 @@ public class UsuarioDto {
 	private int telefonoUsuario=0;
 	private String dniUsuario="aaaaa";
 	private String emailUsuario="aaaaa";
+	private String passwordUsuario="aaaaa";
 	
 	//Constructores
+	public UsuarioDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public UsuarioDto(long idUsuario, String nombreUsuario, String apellidosUsuario, int telefonoUsuario,
-			String dniUsuario, String emailUsuario) {
+			String dniUsuario, String emailUsuario, String passwordUsuario) {
 		super();
 		this.idUsuario = idUsuario;
 		this.nombreUsuario = nombreUsuario;
@@ -25,11 +31,7 @@ public class UsuarioDto {
 		this.telefonoUsuario = telefonoUsuario;
 		this.dniUsuario = dniUsuario;
 		this.emailUsuario = emailUsuario;
-	}
-
-	public UsuarioDto() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.passwordUsuario = passwordUsuario;
 	}
 
 	//Getters & Setters
@@ -80,5 +82,11 @@ public class UsuarioDto {
 	public void setEmailUsuario(String emailUsuario) {
 		this.emailUsuario = emailUsuario;
 	}
-	
+	public String getPasswordUsuario() {
+		return passwordUsuario;
+	}
+
+	public void setPasswordUsuario(String passwordUsuario) {
+		this.passwordUsuario = passwordUsuario;
+	}
 }

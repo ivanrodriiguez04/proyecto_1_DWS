@@ -18,7 +18,7 @@ public class GestionClubImplementacion implements GestionClubInterfaz{
 	
 	public void darAltaClub() {
 		ClubDto nuevoClub= crearClub();
-		String sql="INSERT INTO club_motos.clubes (idclub,nombreclub,direccionclub) VALUES (?,?,?)";
+		String sql="INSERT INTO club_motos.clubes (idclub,nombreclub,direccionclub,emailClub,passwordClub) VALUES (?,?,?,?,?)";
 		try {
 			Connection conexion=cI.conectar();
 			PreparedStatement sentencia=conexion.prepareStatement(sql);
@@ -26,7 +26,9 @@ public class GestionClubImplementacion implements GestionClubInterfaz{
 			sentencia.setLong(1, nuevoClub.getIdClub());
 			sentencia.setString(2, nuevoClub.getNombreClub());
 			sentencia.setString(3, nuevoClub.getDireccionClub());
-			
+			sentencia.setString(4, nuevoClub.getEmailClub());
+			sentencia.setString(5, nuevoClub.getPasswordClub());
+
 			int filasInsertadas=sentencia.executeUpdate();
 			if(filasInsertadas>0) {
 				System.out.println("[INFO] - Insertcion exitosa");
@@ -51,6 +53,10 @@ public class GestionClubImplementacion implements GestionClubInterfaz{
 		nuevoClub.setNombreClub(sc.nextLine());
 		System.out.println("Introduzca la direccion del club: ");
 		nuevoClub.setDireccionClub(sc.nextLine());
+		System.out.println("Introduzca el email del club:");
+		nuevoClub.setEmailClub(sc.nextLine());
+		System.out.println("Introduzca la contraseña del club:");
+		nuevoClub.setPasswordClub(sc.next());
 		return nuevoClub;
 	}
 }

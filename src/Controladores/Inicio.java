@@ -65,7 +65,7 @@ public class Inicio {
 					break;
 				case 3:
 					System.out.println("[INFO] - Ha seleccionado la opcion 3");
-
+					gU.darBajaUsuario();
 					break;
 				case 4:
 					System.out.println("[INFO] - Ha seleccionado la opcion 4");
@@ -73,7 +73,7 @@ public class Inicio {
 					break;
 				case 5:
 					System.out.println("[INFO] - Ha seleccionado la opcion 5");
-
+					gU.modificarUsuario();
 					break;
 				case 6:
 					System.out.println("[INFO] - Ha seleccionado la opcion 6");
